@@ -33,25 +33,25 @@ public class GameMouseAdapter extends MouseAdapter {
 					}
 				}
 				break;
-			case 3:		//Right mouse button (For the "Red Flag")
-				
-				break;
-				
-			default:    //Some other button (2 = Middle mouse button, etc.)
+			default:
 				//Do nothing
 				break;
 		}
 	}
 	public void mouseReleased(MouseEvent e) {
+		Component c = e.getComponent();
+		while (!(c instanceof JFrame)) {
+			c = c.getParent();
+			if (c == null) {
+				return;
+			}
+		}
+		GameManagerPanel gamePanel = (GameManagerPanel)((JFrame) c).getContentPane().getComponent(0);
 		switch (e.getButton()) {
 			case 1:		//Left mouse button
 				
 				break;
-				
-			case 3:		//Right mouse button ("Red Flag")
-				
-				break; 
-			default:    //Some other button (2 = Middle mouse button, etc.)
+			default:  
 				//Do nothing
 				break;
 		}

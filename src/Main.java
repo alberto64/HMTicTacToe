@@ -12,6 +12,7 @@ public class Main {
 		int frameWidth = (int) (computerScreen.width*0.80);
 		int frameHeight = (int) (computerScreen.height*0.80);
 		
+		
 		ticTacToeFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		ticTacToeFrame.setSize(frameWidth, frameHeight);
 		ticTacToeFrame.setLocation((int)(computerScreen.width - frameWidth)/2, (int)(computerScreen.height - frameHeight)/2);
@@ -22,8 +23,7 @@ public class Main {
 		GameMouseAdapter gameMouse = new GameMouseAdapter();
 		ticTacToeFrame.addMouseListener(gameMouse);
 		ticTacToeFrame.setVisible(true);
-		int gridX = (frameWidth - Math.min(frameWidth, frameHeight))/2;
-		int gridY = (frameHeight - Math.min(frameWidth, frameHeight))/2;
+
 	}
 
 }

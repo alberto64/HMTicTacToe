@@ -125,4 +125,5 @@ public class GameManagerPanel extends JPanel {
 	public void goToNextTurn() {
 		isXsTurn = !isXsTurn;
 	}
+	
 }

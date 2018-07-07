@@ -1,0 +1,15 @@
+Required Functionality:
+* Ability to replay the game
+* Logic for defeating the game (3x3 lines)
+* Add informative labels in the game's frame
+
+Desired Functionality:
+* Resizable game window (Updates the grid size also)
+* Add tool bar to frame that contains (Help, settings, views, ect)
+** Alternatively or additionally a Main screen for game (Home screen with game selection [1Vs1 or 1VsBot] and settings)
+* Add logic for playing with a Bot.
+
+Optional Functionality:
+* Different difficulties for the Bot.
+* High Score System of consecutive wins in a row.
+* Ability to quit mid game.
