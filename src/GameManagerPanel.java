@@ -50,7 +50,12 @@ public class GameManagerPanel extends JPanel {
 		cellHeight = (gridHeight/tableRows) - tableRows;
 		totalRows = tableRows;
 		totalColumns = tableColumns;
-		gameBoard = new CellSlot[tableRows][tableColumns];
+		gameBoard = new CellSlot[tableColumns][tableRows];
+		isXsTurn = true;
+	}
+	
+	public void reset() {
+		gameBoard = new CellSlot[totalColumns][totalRows];
 		isXsTurn = true;
 	}
 	

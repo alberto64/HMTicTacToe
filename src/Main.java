@@ -12,16 +12,24 @@ public class Main {
 		int frameWidth = (int) (computerScreen.width*0.80);
 		int frameHeight = (int) (computerScreen.height*0.80);
 		
-		
+		// Create Game Window
 		ticTacToeFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		ticTacToeFrame.setSize(frameWidth, frameHeight);
 		ticTacToeFrame.setLocation((int)(computerScreen.width - frameWidth)/2, (int)(computerScreen.height - frameHeight)/2);
 		ticTacToeFrame.setResizable(false);
 		
-		GameManagerPanel fieldPanel = new GameManagerPanel(frameWidth, frameHeight, 3, 3);
-		ticTacToeFrame.add(fieldPanel);
+		
+		// Create title screen
+		
+		//TitleScreenPanel titlePanel = new TitleScreenPanel();
+		//ticTacToeFrame.add(titlePanel);
+		// Create Game Board
+		 
 		GameMouseAdapter gameMouse = new GameMouseAdapter();
 		ticTacToeFrame.addMouseListener(gameMouse);
+		GameManagerPanel fieldPanel = new GameManagerPanel(frameWidth, frameHeight, 3, 3);
+		ticTacToeFrame.add(fieldPanel);
+		
 		ticTacToeFrame.setVisible(true);
 
 	}

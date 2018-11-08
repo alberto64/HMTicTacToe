@@ -28,10 +28,16 @@ public class GameMouseAdapter extends MouseAdapter {
 						isSuccess = gamePanel.insertOSelection(mouseXCoordinate, mouseYCoordinate);
 					}
 					if(isSuccess) {
-						gamePanel.goToNextTurn();
 						gamePanel.repaint();
+						
+						gamePanel.goToNextTurn();
 					}
 				}
+				break;
+			case 3:     // Right Mouse Button 
+				gamePanel.reset();
+				gamePanel.repaint();
+
 				break;
 			default:
 				//Do nothing
